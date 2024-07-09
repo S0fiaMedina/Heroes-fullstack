@@ -3,22 +3,21 @@
 <head>
     <title>Héroes</title>
     <script src="/js/main.js" defer type="module"></script>
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
 </head>
 <body>
-    <ul>
-        <li th:each="heroe : ${heroList}">
-            <!-- <p th:text="${heroe.name}"></p>
-             <p th:text="${heroe.image_url}"></p>  -->
-
-            <object-heroe 
-                th:attr="nombre=${heroe.name}, 
-                         descripcion=${heroe.description}, 
-                         fecha=${heroe.year_of_creation}, 
-                         foto=${heroe.image_url}, 
+    <div class="cards">
+        <div class="card" th:each="heroe : ${heroList}">
+            <object-heroe
+                th:attr="nombre=${heroe.name},
+                         descripcion=${heroe.description},
+                         fecha=${heroe.yearOfCreation},
+                         foto=${heroe.imageUrl},
                          universo=${heroe.category}">
             </object-heroe>
-        </li>
-    </ul>
+        </div>
+    </div>
 
     <!-- Modal -->
     <div id="myModal" style="display: none;">

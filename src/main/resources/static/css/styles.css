@@ -1,0 +1,150 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+}
+
+html {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: rgba(36, 0, 0, 1); */
+}
+.logo .logoMarvel {
+  width: 160px;
+}
+
+.Marvel {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(36, 0, 0, 1),
+    rgba(115, 36, 36, 1),
+    rgba(255, 0, 0, 1)
+  );
+  background-attachment: fixed;
+}
+
+.DC {
+  background: linear-gradient(180deg, rgb(4, 4, 118) 0%, rgba(0, 0, 0, 1) 100%);
+  height: auto;
+}
+
+.logo .logoDC {
+  width: 160px;
+}
+
+main {
+  padding-top: 1rem;
+}
+
+.logo {
+  display: flex;
+  width: 160px;
+  overflow-x: hidden;
+  margin: auto;
+  transition: all 1s ease-in-out 0.1s;
+  gap: 2rem;
+}
+.logo:hover {
+  width: 600px;
+}
+
+.logoReverse {
+  flex-flow: row-reverse;
+  justify-content: flex-end;
+}
+
+.inactive {
+  display: none;
+}
+
+.logo img {
+  width: 10rem;
+  display: flex;
+  margin: 2rem auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  min-width: 100%;
+  height: 20.5rem;
+}
+
+.card {
+  height: 25rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  overflow: hidden;
+  border: 0;
+  border-radius: 1rem;
+  width: 15rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.2rem 0.2rem 1rem 0.2rem black;
+  transition: 200ms;
+  margin: auto;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card button {
+  background: black;
+  border: 0;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: 300ms;
+}
+.card button:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile version */
+@media (max-width: 500px) {
+  .logo {
+    margin-top: 4rem;
+  }
+
+  .modal-content {
+    overflow: hidden;
+    width: 90%;
+  }
+}
