@@ -1,0 +1,2 @@
+import ObjectHeroe from "./ObjectHeroe";
+

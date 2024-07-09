@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Héroes</title>
+    <script src="/src/main/resources/static/main.js" defer></script>
+</head>
+<body>
+    <ul>
+        <li th:each="heroe : ${heroes}">
+            <object-heroe 
+                th:attr="nombre=${heroe.nombre}, 
+                         descripcion=${heroe.descripcion}, 
+                         fecha=${heroe.fecha}, 
+                         foto=${heroe.foto}, 
+                         universo=${heroe.universo}">
+            </object-heroe>
+        </li>
+    </ul>
+
+    <!-- Modal -->
+    <div id="myModal" style="display: none;">
+        <div>
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <p id="modalFecha"></p>
+            <img class="imgModal" src="" alt="Hero Image">
+        </div>
+    </div>
+</body>
+</html>
