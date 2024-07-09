@@ -14,9 +14,9 @@ public class Hero {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String imageUrl;
+    private String image_url;
     private String description;
-    private int yearOfCreation;
+    private int year_of_creation;
     private String category;
 
 
@@ -24,13 +24,18 @@ public class Hero {
     }
 
     
+   
+
+
     public Hero(String name, String imageUrl, String description, int yearOfCreation, String category) {
         this.name = name;
-        this.imageUrl = imageUrl;
+        this.image_url = imageUrl;
         this.description = description;
-        this.yearOfCreation = yearOfCreation;
+        this.year_of_creation = yearOfCreation;
         this.category = category;
     }
+
+
 
 
     public Long getId() {
@@ -51,11 +56,11 @@ public class Hero {
     public void setDescription(String description) {
         this.description = description;
     }
-    public int getYearOfCreation() {
-        return yearOfCreation;
+    public int getYear_of_creation() {
+        return year_of_creation;
     }
-    public void setYearOfCreation(int yearOfCreation) {
-        this.yearOfCreation = yearOfCreation;
+    public void setYear_of_creation(int yearOfCreation) {
+        this.year_of_creation = yearOfCreation;
     }
     public String getCategory() {
         return category;
@@ -63,11 +68,32 @@ public class Hero {
     public void setCategory(String category) {
         this.category = category;
     }
-    public String getImageUrl() {
-        return imageUrl;
+    
+
+
+
+
+
+    @Override
+    public String toString() {
+        return "Hero [id=" + id + ", name=" + name + ", imageUrl=" + image_url + ", description=" + description
+                + ", yearOfCreation=" + year_of_creation + ", category=" + category + "]";
     }
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+
+
+
+
+
+    public String getImage_url() {
+        return image_url;
+    }
+
+
+
+
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
     }
     
 

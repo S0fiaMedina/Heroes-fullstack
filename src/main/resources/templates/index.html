@@ -7,11 +7,14 @@
 <body>
     <ul>
         <li th:each="heroe : ${heroList}">
+            <!-- <p th:text="${heroe.name}"></p>
+             <p th:text="${heroe.image_url}"></p>  -->
+
             <object-heroe 
                 th:attr="nombre=${heroe.name}, 
                          descripcion=${heroe.description}, 
-                         fecha=${heroe.yearOfCreation}, 
-                         foto=${heroe.imgUrl}, 
+                         fecha=${heroe.year_of_creation}, 
+                         foto=${heroe.image_url}, 
                          universo=${heroe.category}">
             </object-heroe>
         </li>

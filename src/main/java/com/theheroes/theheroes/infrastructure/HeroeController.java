@@ -35,6 +35,7 @@ public class HeroeController {
   public String index(Model model) {
     model.addAttribute("heroList", heroes);
     model.addAttribute("hero", new Hero());
+    //heroes.forEach( heroe -> {System.out.println(heroe);});
     return "index";
   }
 
@@ -48,5 +49,7 @@ public class HeroeController {
   public Hero getAllHeroes(@RequestParam Long id) {
     return heroService.getHero(id);
   }
+
+
 
 }
