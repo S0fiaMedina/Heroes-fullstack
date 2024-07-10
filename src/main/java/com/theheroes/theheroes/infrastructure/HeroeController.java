@@ -33,7 +33,6 @@ public class HeroeController {
   @GetMapping("/")
   public String index(Model model) {
     model.addAttribute("heroList", heroes);
-    model.addAttribute("hero", new Hero());
     return "index";
   }
 
